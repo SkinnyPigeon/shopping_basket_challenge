@@ -129,6 +129,14 @@ public class BasketTest {
     assertEquals( 1, basket.total(), 0.01 );
   }
 
+  @Test
+  public void bogofWorksAcrossDifferentItemsFromSameClass() {
+    basket.add( irnBru );
+    basket.add( sprite );
+    basket.bogof();
+    assertEquals( 1, basket.total(), 0.01 );
+  }
+
 
 }
 

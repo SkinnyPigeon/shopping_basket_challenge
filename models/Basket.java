@@ -48,23 +48,22 @@ public class Basket {
 
   public void sortBasket() {
     Collections.sort(mItems, new Comparator<Consumable>() {
-        @Override
-        public int compare(Consumable foodOne, Consumable foodTwo) {
-            return foodOne.name().compareToIgnoreCase(foodTwo.name());
-        }
+      @Override
+      public int compare(Consumable foodOne, Consumable foodTwo) {
+        return foodOne.name().compareToIgnoreCase(foodTwo.name());
+      }
     });
   }
 
   public void bogof() {
     sortBasket();
-     for ( int i = 0; i < mItems.size() - 1; i++ ) {
+    for ( int i = 0; i < mItems.size() - 1; i++ ) {
 
-       if( Objects.equals(mItems.get(i).name(), mItems.get( i + 1 ).name() ) 
-          && mItems.get(i).bogof() ) {
+      if( ( mItems.get(i).getClass().equals( mItems.get( i + 1 ).getClass() )
+          && mItems.get(i).bogof() )) 
 
         mTotal -= mItems.get(i).price();
-        i += 1;
-      }
+      i += 1;
     }
   }
 
