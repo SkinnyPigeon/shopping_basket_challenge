@@ -155,6 +155,16 @@ public class BasketTest {
     assertEquals( 22.50, basket.total(), 0.01 );
   }
 
+  @Test
+  public void bulkDiscountWorksAfterBogof() {
+    basket.add( irnBru );
+    basket.add( steak );
+    basket.add( sprite );
+    basket.bogof();
+    basket.bulkDiscount();
+    assertEquals( 23.40, basket.total(), 0.01 );
+  }
+
 
 }
 
