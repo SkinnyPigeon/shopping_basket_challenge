@@ -29,6 +29,7 @@ public class Basket {
   public void removeAll() {
     int size = mItems.size();
     for( int i = 0; i < size; i++ ) {
+      mTotal = 0;
       mItems.remove(0);
     }
   }
@@ -36,6 +37,7 @@ public class Basket {
   public void remove( Consumable item ) {
     for( int i = 0; i < mItems.size(); i++ ){
       if( item == mItems.get(i) ) {
+        mTotal -= item.price();
         mItems.remove( i );
         break;
       }

@@ -73,12 +73,16 @@ public class BasketTest {
   public void quickTestToSeeThatTheTotalWillIncreaseWithMultipleOfTheSameItem() {
     basket.add( lays );
     basket.add( lays );
-    basket.remove( lays );
     assertEquals( 1, basket.total(), 0.01 );
   }
 
-  // @Test
-  // public void basketWill 
+  @Test
+  public void basketWillReduceInTotalWhenAllItemsAreRemoved() {
+    basket.add( lays );
+    basket.add( lays );
+    basket.removeAll();
+    assertEquals( 0, basket.total(), 0.01 );
+  } 
 
 
 }
