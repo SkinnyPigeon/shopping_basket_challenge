@@ -73,5 +73,11 @@ public class Basket {
     }
   }
 
+  public void customerDiscount( Boolean card ) {
+    if( card ) {
+      mTotal *= 0.98;
+    }
+  }
+
 
 }

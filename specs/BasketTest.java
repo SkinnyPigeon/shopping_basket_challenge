@@ -165,6 +165,12 @@ public class BasketTest {
     assertEquals( 23.40, basket.total(), 0.01 );
   }
 
+  public void customerDiscountWorksByItselfIfLoyaltyCardIsPresent() {
+    basket.add( irnBru );
+    basket.customerDiscount( true );
+    assertEquals( 0.98, basket.total(), 0.01 );
+  }
+
 
 }
 
