@@ -98,6 +98,15 @@ public class BasketTest {
     basket.add( irnBru );
     basket.bogof();
     assertEquals( 1, basket.total(), 0.01 );
+  }
+
+  @Test
+  public void bogofCanBeAppliedToObjectOutOfOrder() {
+    basket.add( irnBru );
+    basket.add( lays );
+    basket.add( irnBru );
+    basket.bogof();
+    assertEquals( 1.5, basket.total(), 0.01 );
   } 
 
 
