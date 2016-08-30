@@ -82,6 +82,14 @@ public class BasketTest {
     basket.add( lays );
     basket.removeAll();
     assertEquals( 0, basket.total(), 0.01 );
+  }
+
+  @Test
+  public void basketWillReduceInTotalWhenSingleItemIsRemoved() {
+    basket.add( lays );
+    basket.add( lays );
+    basket.remove( lays );
+    assertEquals( 0.5, basket.total(), 0.01 );
   } 
 
 
