@@ -23,6 +23,10 @@ public class FoodFactory {
       return new FizzyPop( "Sprite" );
     }
 
+    if( foodStuff.equalsIgnoreCase( "Steak" ) ) {
+      return new Steak();
+    }
+
     return null;
   }
 }

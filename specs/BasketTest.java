@@ -11,12 +11,14 @@ public class BasketTest {
   Consumable sprite;
   Consumable walkers;
   Consumable lays;
+  Consumable steak;
 
 
   @Before
   public void before() {
     basket = new Basket();
     factory = new FoodFactory();
+    steak = factory.getFood( "Steak" );
     irnBru = factory.getFood( "Irn Bru" );
     irnBru2 = factory.getFood( "Irn Bru" );
     sprite = factory.getFood( "Sprite" );
@@ -144,6 +146,13 @@ public class BasketTest {
     basket.add( sprite );
     basket.bogof();
     assertEquals( 2, basket.total(), 0.01 );
+  }
+
+  @Test
+  public void bulkDiscountWorksByItself() {
+    basket.add( steak );
+    basket.bulkDiscount();
+    assertEquals( 22.50, basket.total(), 0.01 );
   }
 
 

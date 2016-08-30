@@ -67,5 +67,11 @@ public class Basket {
     }
   }
 
+  public void bulkDiscount() {
+    if( mTotal > 20 ) {
+      mTotal *= 0.9;
+    }
+  }
+
 
 }
