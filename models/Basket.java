@@ -60,10 +60,10 @@ public class Basket {
     for ( int i = 0; i < mItems.size() - 1; i++ ) {
 
       if( ( mItems.get(i).getClass().equals( mItems.get( i + 1 ).getClass() )
-          && mItems.get(i).bogof() )) 
+        && mItems.get(i).bogof() )) 
 
         mTotal -= mItems.get(i).price();
-      i += 1;
+        i += 1;
     }
   }
 
