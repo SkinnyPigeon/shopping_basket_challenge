@@ -45,6 +45,14 @@ public class BasketTest {
     assertEquals( 1.5, basket.total(), 0.01 );
   }
 
+  @Test
+  public void basketCanRemoveAllItems() {
+    basket.add( sprite );
+    basket.add( lays );
+    basket.removeAll();
+    assertEquals( 0, basket.size() );
+  }
+
 
 }
 

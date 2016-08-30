@@ -26,5 +26,12 @@ public class Basket {
     mItems.add( item );
   }
 
+  public void removeAll() {
+    int size = mItems.size();
+    for( int i = 0; i < size; i++ ) {
+      mItems.remove(0);
+    }
+  }
+
 
 }
