@@ -109,6 +109,16 @@ public class BasketTest {
     assertEquals( 1.5, basket.total(), 0.01 );
   } 
 
+  @Test
+  public void bogofWillIgnoreItemsWhichAreNotBogof() {
+    basket.add( irnBru );
+    basket.add( lays );
+    basket.add( irnBru );
+    basket.add( lays );
+    basket.bogof();
+    assertEquals( 2, basket.total(), 0.01 );
+  }
+
 
 }
 

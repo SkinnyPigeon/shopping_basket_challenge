@@ -57,7 +57,8 @@ public class Basket {
   public void bogof() {
     sortBasket();
      for ( int i = 0; i < mItems.size() - 1; i++ ) {
-       if( mItems.get(i) == mItems.get( i + 1 )) {
+       if( mItems.get(i).name() == mItems.get( i + 1 ).name() 
+          && mItems.get(i).bogof() ) {
         mTotal -= mItems.get(i).price();
         i += 1;
       }
