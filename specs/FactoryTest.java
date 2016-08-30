@@ -4,7 +4,7 @@ import models.*;
 
 public class FactoryTest {
 
-  FoodFactory factory;
+  ItemFactory factory;
   Buyable irnBru;
   Buyable sprite;
   Buyable walkers;
@@ -13,11 +13,11 @@ public class FactoryTest {
 
   @Before
   public void before() {
-    factory = new FoodFactory();
-    irnBru = factory.getFood( "Irn Bru" );
-    sprite = factory.getFood( "Sprite" );
-    lays = factory.getFood( "Lays" );
-    walkers = factory.getFood( "Walkers" );
+    factory = new ItemFactory();
+    irnBru = factory.getItem( "Irn Bru" );
+    sprite = factory.getItem( "Sprite" );
+    lays = factory.getItem( "Lays" );
+    walkers = factory.getItem( "Walkers" );
   }
 
   @Test
