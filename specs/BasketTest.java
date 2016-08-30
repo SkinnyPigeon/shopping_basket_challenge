@@ -171,6 +171,12 @@ public class BasketTest {
     assertEquals( 0.98, basket.total(), 0.01 );
   }
 
+  public void customerCanNotUseInvalidCardForDiscount() {
+    basket.add( irnBru );
+    basket.customerDiscount( false );
+    assertEquals( 1, basket.total(), 0.01 );
+  }
+
 
 }
 
