@@ -16,7 +16,7 @@ public class Basket {
   }
 
   public double total() {
-    double total = (double) Math.round( mTotal * 100 ) / 100;
+    double total = ( double ) Math.round( mTotal * 100 ) / 100;
     return total;
   }
 
@@ -64,7 +64,7 @@ public class Basket {
         && mItems.get(i).bogof() )) 
 
         mTotal -= mItems.get(i).price();
-        i += 1;
+      i += 1;
     }
   }
 
