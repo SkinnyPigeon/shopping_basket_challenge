@@ -69,6 +69,17 @@ public class BasketTest {
     assertEquals( 1, basket.size() );
   }
 
+  @Test
+  public void quickTestToSeeThatTheTotalWillIncreaseWithMultipleOfTheSameItem() {
+    basket.add( lays );
+    basket.add( lays );
+    basket.remove( lays );
+    assertEquals( 1, basket.total(), 0.01 );
+  }
+
+  // @Test
+  // public void basketWill 
+
 
 }
 
