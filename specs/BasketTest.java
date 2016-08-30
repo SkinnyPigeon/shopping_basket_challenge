@@ -38,12 +38,12 @@ public class BasketTest {
     assertEquals( 1, basket.size() );
   }
 
-  // @Test
-  // public void basketCanTotalUpGoods() {
-  //   basket.add( sprite );
-  //   basket.add( lays );
-  //   assertEquals( 1.5, basket.total(), 0.01 );
-  // }
+  @Test
+  public void basketCanTotalUpGoods() {
+    basket.add( sprite );
+    basket.add( lays );
+    assertEquals( 1.5, basket.total(), 0.01 );
+  }
 
 
 }

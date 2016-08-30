@@ -22,6 +22,7 @@ public class Basket {
   }
 
   public void add( Consumable item ) {
+    mTotal += item.price();
     mItems.add( item );
   }
 
