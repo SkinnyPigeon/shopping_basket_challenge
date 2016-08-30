@@ -53,6 +53,14 @@ public class BasketTest {
     assertEquals( 0, basket.size() );
   }
 
+  @Test
+  public void basketCanRemoveSingleItem() {
+    basket.add( sprite );
+    basket.add( irnBru );
+    basket.remove( irnBru );
+    assertEquals( 1, basket.size() );
+  }
+
 
 }
 

@@ -33,5 +33,13 @@ public class Basket {
     }
   }
 
+  public void remove( Consumable item ) {
+    for( int i = 0; i < mItems.size(); i++ ){
+      if( item == mItems.get(i) ) {
+        mItems.remove( i );
+      }
+    }
+  }
+
 
 }
