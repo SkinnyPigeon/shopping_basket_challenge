@@ -21,5 +21,9 @@ public class Basket {
     return mItems.size();
   }
 
+  public void add( Consumable item ) {
+    mItems.add( item );
+  }
+
 
 }

@@ -32,11 +32,11 @@ public class BasketTest {
     assertEquals( 0, basket.size() );
   }
 
-  // @Test
-  // public void basketCanAddConsumables() {
-  //   basket.add( irnBru );
-  //   assertEquals( 1, basket.size() );
-  // }
+  @Test
+  public void basketCanAddConsumables() {
+    basket.add( irnBru );
+    assertEquals( 1, basket.size() );
+  }
 
   // @Test
   // public void basketCanTotalUpGoods() {
