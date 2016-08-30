@@ -61,6 +61,14 @@ public class BasketTest {
     assertEquals( 1, basket.size() );
   }
 
+  @Test
+  public void basketWillOnlyRemoveTheFirstItem() {
+    basket.add( irnBru );
+    basket.add( irnBru );
+    basket.remove( irnBru );
+    assertEquals( 1, basket.size() );
+  }
+
 
 }
 
