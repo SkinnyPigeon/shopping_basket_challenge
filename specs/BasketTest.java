@@ -165,16 +165,26 @@ public class BasketTest {
     assertEquals( 23.40, basket.total(), 0.01 );
   }
 
+  @Test
   public void customerDiscountWorksByItselfIfLoyaltyCardIsPresent() {
     basket.add( irnBru );
     basket.customerDiscount( true );
     assertEquals( 0.98, basket.total(), 0.01 );
   }
 
+  @Test
   public void customerCanNotUseInvalidCardForDiscount() {
     basket.add( irnBru );
     basket.customerDiscount( false );
     assertEquals( 1, basket.total(), 0.01 );
+  }
+
+  @Test
+  public void allDiscountsAndBogofWorkTogether() {
+    basket.add( irnBru );
+    basket.add( steak );
+    basket.discounts( true );
+    assertEquals( 22.93, basket.total(), 0.01 );
   }
 
 

@@ -16,7 +16,8 @@ public class Basket {
   }
 
   public double total() {
-    return mTotal;
+    double total = (double) Math.round( mTotal * 100 ) / 100;
+    return total;
   }
 
   public int size() {
@@ -78,6 +79,12 @@ public class Basket {
       mTotal *= 0.98;
     }
   }
+
+  public void discounts( Boolean card ) {
+    bogof();
+    bulkDiscount();
+    customerDiscount( card );
+  } 
 
 
 }
