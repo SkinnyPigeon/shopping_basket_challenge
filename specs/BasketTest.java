@@ -7,6 +7,7 @@ public class BasketTest {
   Basket basket;
   FoodFactory factory;
   Consumable irnBru;
+  Consumable irnBru2;
   Consumable sprite;
   Consumable walkers;
   Consumable lays;
@@ -17,6 +18,7 @@ public class BasketTest {
     basket = new Basket();
     factory = new FoodFactory();
     irnBru = factory.getFood( "Irn Bru" );
+    irnBru2 = factory.getFood( "Irn Bru" );
     sprite = factory.getFood( "Sprite" );
     lays = factory.getFood( "Lays" );
     walkers = factory.getFood( "Walkers" );
@@ -117,6 +119,14 @@ public class BasketTest {
     basket.add( lays );
     basket.bogof();
     assertEquals( 2, basket.total(), 0.01 );
+  }
+
+  @Test
+  public void bogofWorksWithDifferentInstancesOfItems() {
+    basket.add( irnBru );
+    basket.add( irnBru2 );
+    basket.bogof();
+    assertEquals( 1, basket.total(), 0.01 );
   }
 
 

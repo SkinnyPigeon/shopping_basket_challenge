@@ -3,6 +3,7 @@ package models;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Basket {
 
@@ -57,8 +58,10 @@ public class Basket {
   public void bogof() {
     sortBasket();
      for ( int i = 0; i < mItems.size() - 1; i++ ) {
-       if( mItems.get(i).name() == mItems.get( i + 1 ).name() 
+
+       if( Objects.equals(mItems.get(i).name(), mItems.get( i + 1 ).name() ) 
           && mItems.get(i).bogof() ) {
+
         mTotal -= mItems.get(i).price();
         i += 1;
       }
