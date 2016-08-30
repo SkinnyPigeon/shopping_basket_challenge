@@ -187,6 +187,14 @@ public class BasketTest {
     assertEquals( 22.93, basket.total(), 0.01 );
   }
 
+  @Test
+  public void discountsStillIgnoreTheFalseDiscountCards() {
+    basket.add( irnBru );
+    basket.add( steak );
+    basket.discounts( false );
+    assertEquals( 23.4, basket.total(), 0.01 );
+  }
+
 
 }
 
