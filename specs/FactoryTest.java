@@ -2,9 +2,9 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import models.*;
 
-public class FactoryTest {
+public class shelfTest {
 
-  ItemFactory factory;
+  ItemFactory shelf;
   Buyable irnBru;
   Buyable sprite;
   Buyable walkers;
@@ -13,11 +13,11 @@ public class FactoryTest {
 
   @Before
   public void before() {
-    factory = new ItemFactory();
-    irnBru = factory.getItem( "Irn Bru" );
-    sprite = factory.getItem( "Sprite" );
-    lays = factory.getItem( "Lays" );
-    walkers = factory.getItem( "Walkers" );
+    shelf = new ItemFactory();
+    irnBru = shelf.getItem( "Irn Bru" );
+    sprite = shelf.getItem( "Sprite" );
+    lays = shelf.getItem( "Lays" );
+    walkers = shelf.getItem( "Walkers" );
   }
 
   @Test

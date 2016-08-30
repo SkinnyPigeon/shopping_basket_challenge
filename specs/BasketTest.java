@@ -5,7 +5,7 @@ import models.*;
 public class BasketTest {
 
   Basket basket;
-  ItemFactory factory;
+  ItemFactory shelf;
   Buyable irnBru;
   Buyable irnBru2;
   Buyable sprite;
@@ -17,13 +17,13 @@ public class BasketTest {
   @Before
   public void before() {
     basket = new Basket();
-    factory = new ItemFactory();
-    steak = factory.getItem( "Steak" );
-    irnBru = factory.getItem( "Irn Bru" );
-    irnBru2 = factory.getItem( "Irn Bru" );
-    sprite = factory.getItem( "Sprite" );
-    lays = factory.getItem( "Lays" );
-    walkers = factory.getItem( "Walkers" );
+    shelf = new ItemFactory();
+    steak = shelf.getItem( "Steak" );
+    irnBru = shelf.getItem( "Irn Bru" );
+    irnBru2 = shelf.getItem( "Irn Bru" );
+    sprite = shelf.getItem( "Sprite" );
+    lays = shelf.getItem( "Lays" );
+    walkers = shelf.getItem( "Walkers" );
   }
 
   @Test
