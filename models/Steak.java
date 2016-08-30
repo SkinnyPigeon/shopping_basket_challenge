@@ -1,6 +1,6 @@
 package models;
 
-public class Steak implements Consumable {
+public class Steak implements Buyable {
 
   private double mPrice;
   private boolean mBogof;

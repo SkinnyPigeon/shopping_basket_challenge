@@ -2,7 +2,7 @@ package models;
 
 public class FoodFactory {
 
-  public Consumable getFood( String foodStuff ) {
+  public Buyable getFood( String foodStuff ) {
     if( foodStuff == null ) {
       return null;
     }

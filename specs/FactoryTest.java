@@ -5,10 +5,10 @@ import models.*;
 public class FactoryTest {
 
   FoodFactory factory;
-  Consumable irnBru;
-  Consumable sprite;
-  Consumable walkers;
-  Consumable lays;
+  Buyable irnBru;
+  Buyable sprite;
+  Buyable walkers;
+  Buyable lays;
 
 
   @Before

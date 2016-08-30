@@ -1,6 +1,6 @@
 package models;
 
-public class FizzyPop implements Consumable {
+public class FizzyPop implements Buyable {
 
   private double mPrice;
   private boolean mBogof;

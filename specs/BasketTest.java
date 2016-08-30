@@ -6,12 +6,12 @@ public class BasketTest {
 
   Basket basket;
   FoodFactory factory;
-  Consumable irnBru;
-  Consumable irnBru2;
-  Consumable sprite;
-  Consumable walkers;
-  Consumable lays;
-  Consumable steak;
+  Buyable irnBru;
+  Buyable irnBru2;
+  Buyable sprite;
+  Buyable walkers;
+  Buyable lays;
+  Buyable steak;
 
 
   @Before

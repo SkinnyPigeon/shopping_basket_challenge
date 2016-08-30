@@ -1,6 +1,6 @@
 package models;
 
-public class Crisps implements Consumable {
+public class Crisps implements Buyable {
 
   private double mPrice;
   private boolean mBogof;

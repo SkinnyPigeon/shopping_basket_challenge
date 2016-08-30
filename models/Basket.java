@@ -7,11 +7,11 @@ import java.util.Objects;
 
 public class Basket {
 
-  private ArrayList< Consumable > mItems;
+  private ArrayList< Buyable > mItems;
   private double mTotal;
 
   public Basket() {
-    mItems = new ArrayList< Consumable >();
+    mItems = new ArrayList< Buyable >();
     mTotal = 0;
   }
 
@@ -24,7 +24,7 @@ public class Basket {
     return mItems.size();
   }
 
-  public void add( Consumable item ) {
+  public void add( Buyable item ) {
     mTotal += item.price();
     mItems.add( item );
   }
@@ -37,7 +37,7 @@ public class Basket {
     }
   }
 
-  public void remove( Consumable item ) {
+  public void remove( Buyable item ) {
     for( int i = 0; i < mItems.size(); i++ ){
       if( item == mItems.get(i) ) {
         mTotal -= item.price();
@@ -48,10 +48,10 @@ public class Basket {
   }
 
   public void sortBasket() {
-    Collections.sort(mItems, new Comparator<Consumable>() {
+    Collections.sort( mItems, new Comparator< Buyable >() {
       @Override
-      public int compare(Consumable foodOne, Consumable foodTwo) {
-        return foodOne.name().compareToIgnoreCase(foodTwo.name());
+      public int compare( Buyable itemOne, Buyable itemTwo ) {
+        return itemOne.name().compareToIgnoreCase( itemTwo.name() );
       }
     });
   }

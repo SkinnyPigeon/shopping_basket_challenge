@@ -1,6 +1,6 @@
 package models;
 
-public interface Consumable {
+public interface Buyable {
   double price();
   boolean bogof();
   String name();
