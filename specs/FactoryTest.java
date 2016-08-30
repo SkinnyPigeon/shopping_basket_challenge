@@ -14,10 +14,15 @@ public class FactoryTest {
   @Before
   public void before() {
     factory = new FoodFactory();
-    irnBru = factory.getFood( "Fizzy Pop" );
-    sprite = factory.getFood( "Fizzy Pop" );
-    lays = factory.getFood( "Crisps" );
-    walkers = factory.getFood( "Crisps" );
+    irnBru = factory.getFood( "Irn Bru" );
+    sprite = factory.getFood( "Sprite" );
+    lays = factory.getFood( "Lays" );
+    walkers = factory.getFood( "Walkers" );
+  }
+
+  @Test
+  public void foodHasName() {
+    assertEquals( "Irn Bru", irnBru.name() );
   }
 
   @Test

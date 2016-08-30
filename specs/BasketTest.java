@@ -16,10 +16,10 @@ public class BasketTest {
   public void before() {
     basket = new Basket();
     factory = new FoodFactory();
-    irnBru = factory.getFood( "Fizzy Pop" );
-    sprite = factory.getFood( "Fizzy Pop" );
-    lays = factory.getFood( "Crisps" );
-    walkers = factory.getFood( "Crisps" );
+    irnBru = factory.getFood( "Irn Bru" );
+    sprite = factory.getFood( "Sprite" );
+    lays = factory.getFood( "Lays" );
+    walkers = factory.getFood( "Walkers" );
   }
 
   @Test
@@ -90,6 +90,14 @@ public class BasketTest {
     basket.add( lays );
     basket.remove( lays );
     assertEquals( 0.5, basket.total(), 0.01 );
+  }
+
+  @Test
+  public void bogofCanBeApplied() {
+    basket.add( irnBru );
+    basket.add( irnBru );
+    basket.bogof();
+    assertEquals( 1, basket.total(), 0.01 );
   } 
 
 

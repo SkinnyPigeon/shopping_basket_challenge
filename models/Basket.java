@@ -2,6 +2,7 @@ package models;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class Basket {
 
@@ -40,6 +41,25 @@ public class Basket {
         mTotal -= item.price();
         mItems.remove( i );
         break;
+      }
+    }
+  }
+
+  public void sortBasket() {
+    Collections.sort(mItems, new Comparator<Consumable>() {
+        @Override
+        public int compare(Consumable foodOne, Consumable foodTwo) {
+            return foodOne.name().compareToIgnoreCase(foodTwo.name());
+        }
+    });
+  }
+
+  public void bogof() {
+    sortBasket();
+     for ( int i = 0; i < mItems.size() - 1; i++ ) {
+       if( mItems.get(i) == mItems.get( i + 1 )) {
+        mTotal -= mItems.get(i).price();
+        i += 1;
       }
     }
   }
