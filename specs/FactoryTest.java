@@ -21,8 +21,13 @@ public class FactoryTest {
   }
 
   @Test
-  public void drinksAreBeingMade() {
+  public void drinksHavePrice() {
     assertEquals( 1.00, irnBru.price(), 0.01 );
+  }
+
+  @Test
+  public void crispsHavePrice() {
+    assertEquals( 0.5, walkers.price(), 0.01 );
   }
 
   @Test
