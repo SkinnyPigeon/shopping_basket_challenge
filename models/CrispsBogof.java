@@ -1,15 +1,15 @@
 package models;
 
-public class FizzyPop implements Buyable {
+public class CrispsBogof implements Buyable {
 
   private double mPrice;
   private boolean mBogof;
   private String mName;
 
-  public FizzyPop( String name ) {
-    mPrice = 1.00;
-    mBogof = false;
+  public CrispsBogof( String name ) {
     mName = name;
+    mPrice = 0.50;
+    mBogof = true;
   }
 
   public String name() {
