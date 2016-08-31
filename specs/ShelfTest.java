@@ -2,7 +2,7 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import models.*;
 
-public class shelfTest {
+public class ShelfTest {
 
   ItemFactory shelf;
   Buyable irnBru;
