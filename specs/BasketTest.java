@@ -136,39 +136,42 @@ public class BasketTest {
     assertEquals( 1, discount.total(), 0.01 );
   }
 
-  // @Test
-  // public void bogofWorksAcrossDifferentItemsFromSameClass() {
-  //   basket.add( irnBru );
-  //   basket.add( sprite );
-  //   basket.bogof();
-  //   assertEquals( 1, basket.total(), 0.01 );
-  // }
+  @Test
+  public void bogofWorksAcrossDifferentItemsFromSameClass() {
+    basket.add( irnBru );
+    basket.add( sprite );
+    discount = new Discount( basket.items(), basket.total() );
+    discount.bogof();
+    assertEquals( 1, discount.total(), 0.01 );
+  }
 
-  // @Test
-  // public void bogofOnlyWorksForPairsOfItems() {
-  //   basket.add( irnBru );
-  //   basket.add( irnBru );
-  //   basket.add( sprite );
-  //   basket.bogof();
-  //   assertEquals( 2, basket.total(), 0.01 );
-  // }
+  @Test
+  public void bogofOnlyWorksForPairsOfItems() {
+    basket.add( irnBru );
+    basket.add( irnBru );
+    basket.add( sprite );
+    discount = new Discount( basket.items(), basket.total() );
+    discount.bogof();
+    assertEquals( 2, discount.total(), 0.01 );
+  }
 
-  // @Test
-  // public void bulkDiscountWorksByItself() {
-  //   basket.add( steak );
-  //   basket.bulkDiscount();
-  //   assertEquals( 22.50, basket.total(), 0.01 );
-  // }
+  @Test
+  public void bulkDiscountWorksByItself() {
+    basket.add( steak );
+    discount = new Discount( basket.items(), basket.total() );
+    discount.bulkDiscount();
+    assertEquals( 22.50, discount.total(), 0.01 );
+  }
 
-  // @Test
-  // public void bulkDiscountWorksAfterBogof() {
-  //   basket.add( irnBru );
-  //   basket.add( steak );
-  //   basket.add( sprite );
-  //   basket.bogof();
-  //   basket.bulkDiscount();
-  //   assertEquals( 23.40, basket.total(), 0.01 );
-  // }
+  @Test
+  public void bulkDiscountWorksAfterBogof() {
+    basket.add( irnBru );
+    basket.add( steak );
+    basket.add( sprite );
+    basket.bogof();
+    basket.bulkDiscount();
+    assertEquals( 23.40, basket.total(), 0.01 );
+  }
 
   // @Test
   // public void customerDiscountWorksByItselfIfLoyaltyCardIsPresent() {

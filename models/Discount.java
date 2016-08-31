@@ -26,7 +26,6 @@ public class Discount {
 
   public void bogof() {
     sortBasket();
-    System.out.println( mItems.toString() );
     for ( int i = 0; i < mItems.size() - 1; i++ ) {
 
       if( ( mItems.get(i).getClass().equals( mItems.get( i + 1 ).getClass() )
