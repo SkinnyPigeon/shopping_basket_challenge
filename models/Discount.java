@@ -5,10 +5,15 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Objects;
 
-public abstract class Discount {
+public class Discount {
 
-  private ArrayList< Buyable > mItems;
+  private ArrayList< Buyable> mItems;
   private double mTotal;
+
+  public Discount( ArrayList<Buyable> items, double total ) {
+    mItems = items;
+    mTotal = total;
+  }
 
   public void sortBasket() {
     Collections.sort( mItems, new Comparator< Buyable >() {
@@ -48,5 +53,9 @@ public abstract class Discount {
     bogof();
     bulkDiscount();
     customerDiscount( card );
+  }
+
+  public double total() {
+    return mTotal;
   } 
 }

@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Objects;
 
-public class Basket extends Discount{
+public class Basket{
 
   private ArrayList< Buyable > mItems;
   private double mTotal;
@@ -13,6 +13,10 @@ public class Basket extends Discount{
   public Basket() {
     mItems = new ArrayList< Buyable >();
     mTotal = 0;
+  }
+
+  public ArrayList items() {
+    return mItems;
   }
 
   public double total() {
@@ -46,7 +50,5 @@ public class Basket extends Discount{
       }
     }
   }
-
-
 
 }
