@@ -168,40 +168,45 @@ public class BasketTest {
     basket.add( irnBru );
     basket.add( steak );
     basket.add( sprite );
-    basket.bogof();
-    basket.bulkDiscount();
-    assertEquals( 23.40, basket.total(), 0.01 );
+    discount = new Discount( basket.items(), basket.total() );
+    discount.bogof();
+    discount.bulkDiscount();
+    assertEquals( 23.40, discount.total(), 0.01 );
   }
 
-  // @Test
-  // public void customerDiscountWorksByItselfIfLoyaltyCardIsPresent() {
-  //   basket.add( irnBru );
-  //   basket.customerDiscount( true );
-  //   assertEquals( 0.98, basket.total(), 0.01 );
-  // }
+  @Test
+  public void customerDiscountWorksByItselfIfLoyaltyCardIsPresent() {
+    basket.add( irnBru );
+    discount = new Discount( basket.items(), basket.total() );
+    discount.customerDiscount( true );
+    assertEquals( 0.98, discount.total(), 0.01 );
+  }
 
-  // @Test
-  // public void customerCanNotUseInvalidCardForDiscount() {
-  //   basket.add( irnBru );
-  //   basket.customerDiscount( false );
-  //   assertEquals( 1, basket.total(), 0.01 );
-  // }
+  @Test
+  public void customerCanNotUseInvalidCardForDiscount() {
+    basket.add( irnBru );
+    discount = new Discount( basket.items(), basket.total() );
+    discount.customerDiscount( false );
+    assertEquals( 1, discount.total(), 0.01 );
+  }
 
-  // @Test
-  // public void allDiscountsAndBogofWorkTogether() {
-  //   basket.add( irnBru );
-  //   basket.add( steak );
-  //   basket.discounts( true );
-  //   assertEquals( 22.93, basket.total(), 0.01 );
-  // }
+  @Test
+  public void allDiscountsAndBogofWorkTogether() {
+    basket.add( irnBru );
+    basket.add( steak );
+    discount = new Discount( basket.items(), basket.total() );
+    discount.discounts( true );
+    assertEquals( 22.93, discount.total(), 0.01 );
+  }
 
-  // @Test
-  // public void discountsStillIgnoreTheFalseDiscountCards() {
-  //   basket.add( irnBru );
-  //   basket.add( steak );
-  //   basket.discounts( false );
-  //   assertEquals( 23.4, basket.total(), 0.01 );
-  // }
+  @Test
+  public void discountsStillIgnoreTheFalseDiscountCards() {
+    basket.add( irnBru );
+    basket.add( steak );
+    discount = new Discount( basket.items(), basket.total() );
+    discount.discounts( false );
+    assertEquals( 23.4, discount.total(), 0.01 );
+  }
 
 
 }
