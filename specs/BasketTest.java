@@ -209,12 +209,21 @@ public class BasketTest {
   }
 
   @Test
-  public void basketCanAccessDiscountsItself() {
+  public void basketCanAccessDiscountsItselfWithValidCard() {
     basket.add( irnBru );
     basket.add( irnBru );
     basket.add( steak );
     basket.discounts( true );
     assertEquals( 22.93, basket.total(), 0.01 );
+  }
+
+  @Test
+  public void basketCanAccessDiscountsItselfWithOutAValidCard() {
+    basket.add( irnBru );
+    basket.add( irnBru );
+    basket.add( steak );
+    basket.discounts( false );
+    assertEquals( 23.4, basket.total(), 0.01 );
   }
 
 
