@@ -51,4 +51,10 @@ public class Basket{
     }
   }
 
+  public void discounts( Boolean card ) {
+    Discount discount = new Discount( mItems, mTotal );
+    discount.allDiscounts( card );
+    mTotal = discount.total();
+  }
+
 }

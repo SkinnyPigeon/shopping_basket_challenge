@@ -195,7 +195,7 @@ public class BasketTest {
     basket.add( irnBru );
     basket.add( steak );
     discount = new Discount( basket.items(), basket.total() );
-    discount.discounts( true );
+    discount.allDiscounts( true );
     assertEquals( 22.93, discount.total(), 0.01 );
   }
 
@@ -204,8 +204,17 @@ public class BasketTest {
     basket.add( irnBru );
     basket.add( steak );
     discount = new Discount( basket.items(), basket.total() );
-    discount.discounts( false );
+    discount.allDiscounts( false );
     assertEquals( 23.4, discount.total(), 0.01 );
+  }
+
+  @Test
+  public void basketCanAccessDiscountsItself() {
+    basket.add( irnBru );
+    basket.add( irnBru );
+    basket.add( steak );
+    basket.discounts( true );
+    assertEquals( 22.93, basket.total(), 0.01 );
   }
 
 

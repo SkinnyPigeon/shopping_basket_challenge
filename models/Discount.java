@@ -48,7 +48,7 @@ public class Discount {
     }
   }
 
-  public void discounts( Boolean card ) {
+  public void allDiscounts( Boolean card ) {
     bogof();
     bulkDiscount();
     customerDiscount( card );
