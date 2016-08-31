@@ -14,8 +14,8 @@ public class ShelfTest {
   @Before
   public void before() {
     shelf = new ItemFactory();
-    irnBru = shelf.getItem( "Irn Bru Bogof" );
-    sprite = shelf.getItem( "Sprite Bogof" );
+    irnBru = shelf.getItem( "Irn Bru" );
+    sprite = shelf.getItem( "Sprite" );
     lays = shelf.getItem( "Lays" );
     walkers = shelf.getItem( "Walkers" );
   }

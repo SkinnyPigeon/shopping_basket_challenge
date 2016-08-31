@@ -8,35 +8,19 @@ public class ItemFactory {
     }
 
     if( item.equalsIgnoreCase( "Lays" ) ) {
-      return new Crisps( "Lays" );
+      return new Crisps( "Lays", false );
     }
 
     if( item.equalsIgnoreCase( "Walkers" ) ) {
-      return new Crisps( "Walkers" );
-    }
-
-    if( item.equalsIgnoreCase( "Lays Bogof" ) ) {
-      return new CrispsBogof( "Lays" );
-    }
-
-    if( item.equalsIgnoreCase( "Walkers Bogof" ) ) {
-      return new CrispsBogof( "Walkers" );
+      return new Crisps( "Walkers", false );
     }
 
     if( item.equalsIgnoreCase( "Irn Bru" ) ) {
-      return new FizzyPop( "Irn Bru" );
+      return new FizzyPop( "Irn Bru", true );
     }
 
     if( item.equalsIgnoreCase( "Sprite" ) ) {
-      return new FizzyPop( "Sprite" );
-    }
-
-    if( item.equalsIgnoreCase( "Irn Bru Bogof" ) ) {
-      return new FizzyPopBogof( "Irn Bru" );
-    }
-
-    if( item.equalsIgnoreCase( "Sprite Bogof" ) ) {
-      return new FizzyPopBogof( "Sprite" );
+      return new FizzyPop( "Sprite", true );
     }
 
     if( item.equalsIgnoreCase( "Steak" ) ) {

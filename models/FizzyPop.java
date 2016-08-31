@@ -6,9 +6,9 @@ public class FizzyPop implements Buyable {
   private boolean mBogof;
   private String mName;
 
-  public FizzyPop( String name ) {
+  public FizzyPop( String name, boolean bogof ) {
     mPrice = 1.00;
-    mBogof = false;
+    mBogof = bogof;
     mName = name;
   }
 

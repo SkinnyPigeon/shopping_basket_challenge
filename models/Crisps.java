@@ -6,10 +6,10 @@ public class Crisps implements Buyable {
   private boolean mBogof;
   private String mName;
 
-  public Crisps( String name ) {
+  public Crisps( String name, boolean bogof ) {
     mName = name;
     mPrice = 0.50;
-    mBogof = false;
+    mBogof = bogof;
   }
 
   public String name() {

@@ -20,9 +20,9 @@ public class BasketTest {
     basket = new Basket();
     shelf = new ItemFactory();
     steak = shelf.getItem( "Steak" );
-    irnBru = shelf.getItem( "Irn Bru Bogof" );
-    irnBru2 = shelf.getItem( "Irn Bru Bogof" );
-    sprite = shelf.getItem( "Sprite Bogof" );
+    irnBru = shelf.getItem( "Irn Bru" );
+    irnBru2 = shelf.getItem( "Irn Bru" );
+    sprite = shelf.getItem( "Sprite" );
     lays = shelf.getItem( "Lays" );
     walkers = shelf.getItem( "Walkers" );
   }
